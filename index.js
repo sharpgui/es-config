@@ -1,47 +1,34 @@
-# es-config
-es-fonfig for docave
-
-之前打算使用Airbnb config 但是Airbnb 比较严格，结果就导致当项目的代码一build 的时候满屏都是错，
-然后我的解决方式就是我观察这些报错，然后人工鉴定注掉释我感觉得不必要的部分
-，因为当时觉得着些规范有些事我们应该学习的。
-
-现在想使用新的解决方案：即只使用 eslint：recommended 加上开会商定后的规则。
-
-## 安装
-```bash
-$ npm i eslint-config-docave
-```
-
-## 使用方法
-
-### package.json
-```json
-{
-  "name": "xxxxx",
-  "version": "x.x.x",
-
-  "eslintConfig": {
-    "extends": "docave",
-  }
-
-}
-```
-### .eslintrc.js
-```js
 module.exports = {
-  extends: 'docave',
-};
-```
-### .eslintrc
-```js
-{
-    "extends": "docave" 
-}
-```
-### 检查的规则
-eslint:recommended 加上下表所列规则
-```js
- "rules": {
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "jquery": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "jsx-a11y",
+        "react"
+    ],
+    "globals": {
+        "ReactDOM": false,
+        "React": false,
+        "$$": false,
+        "R": true,
+        "UIElement": true,
+        "DependencyObject": false,
+        "AUI": true,
+        "I18N": false,
+        "Tree": false
+    },
+    "rules": {
         "no-console": "off",
         "react/prefer-es6-class": "error",
         // Enforce stateless React Components to be written as a pure function 
@@ -76,4 +63,4 @@ eslint:recommended 加上下表所列规则
         // 在 render 方法中总是确保 return 返回值.
         "react/require-render-return": "error"
     }
-```    
+};
