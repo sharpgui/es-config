@@ -1,5 +1,5 @@
 # es-config
-es-fonfig for docave
+es-fonfig for docave [npm es-config-docave](https://www.npmjs.com/package/eslint-config-docave)
 
 之前打算使用Airbnb config 但是Airbnb 比较严格，结果就导致当项目的代码一build 的时候满屏都是错，
 然后我的解决方式就是我观察这些报错，然后人工鉴定注掉释我感觉得不必要的部分
