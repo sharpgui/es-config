@@ -15,8 +15,7 @@
     "url": "https://github.com/sharpgui/es-config.git"
   },
   "keywords": [
-    "eslint",
-    "lei"
+    "eslint"
   ],
   "author": "advence-liz",
   "license": "MIT",
